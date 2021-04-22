@@ -1,0 +1,34 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.sidebar.category.Intro": {
+    "message": "Intro",
+    "description": "The label for category Intro in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.How-to": {
+    "message": "How-to",
+    "description": "The label for category How-to in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Connect to a Node": {
+    "message": "Connect to a Node",
+    "description": "The label for category Connect to a Node in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Learn": {
+    "message": "Learn",
+    "description": "The label for category Learn in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Maintain": {
+    "message": "Maintain",
+    "description": "The label for category Maintain in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Build": {
+    "message": "Build",
+    "description": "The label for category Build in sidebar sidebar"
+  },
+  "sidebar.sidebar.category.Contribute": {
+    "message": "Contribute",
+    "description": "The label for category Contribute in sidebar sidebar"
+  }
+}
