@@ -1,6 +1,6 @@
 # HydraDX-docs
 
-## Installation
+## Inštalácia
 
 ```console
 yarn install
@@ -12,15 +12,15 @@ yarn install
 yarn start
 ```
 
-This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
+Tento príkaz spustí lokálny vývojový server a otvorí okno prehliadača. Väčšina zmien sa deje live bez nutnosti reštartovania serveru.
 
-## Build
+## Build 
 
 ```console
 yarn build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+Tento príkaz generuje statický obsah do adresára `build` a môže byť doručený akoukoľvek hostingovou službou so statickým obsahom. 
 
 
-Built using [Docusaurus 2](https://v2.docusaurus.io/).
+Build using [Docusaurus 2](https://v2.docusaurus.io/).
