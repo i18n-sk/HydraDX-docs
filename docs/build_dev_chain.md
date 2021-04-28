@@ -1,6 +1,6 @@
 ---
 id: build_dev_chain
-title: Set up a development chain
+title:  Nastav si development chain
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
