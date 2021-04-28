@@ -5,17 +5,17 @@ title: Set up a development chain
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-This section runs you through the process of setting up a local HydraDX chain instance for development. 
+Táto sekcia ťa prevedie procesom nastavenia lokálnej HydraDX chain inštancie pre rozvoj.
 
-:::note
-Are you looking to set up a node for validation purposes? Please move to our [validator setup guide](/node_setup).
+:::poznámka
+Chceš nastaviť node na účel validácie? Presuň sa prosím na [sprievodcu pre validátorov](/node_setup). 
 :::
 
-## 01 Install dependencies
+## 01 Inštalačné závislosti
 
-To prepare a local HydraDX chain instance for development, your machine needs to cover all dependencies for running a Substrate chain. You will need to install a Rust developer environment and make sure that it is configured properly for compiling Substrate runtime code to the WebAssembly (Wasm) target.
+Na to aby bola lokálna HydraDX chain inštancia pripravená na ďalší development, tvoje zariadenie potrebuje pokryť všetky závislosti pre chod Substrate chainu. Budeš si musieť nainštalovať Rust developer prostredie a uistiť sa, že je nakonfigurované správne na kompilovanie Substrate runtime kódu do WebAssembly (Wasm). 
 
-You can install and configure all dependencies manually following the [Substrate guide](https://substrate.dev/docs/en/knowledgebase/getting-started), or you could let this script do all the work for you:
+Všetky závislosti si môžeš nainštalovať manuálne s pomocou tohto [Substrate sprievodcu](https://substrate.dev/docs/en/knowledgebase/getting-started), alebo môžeš všetku prácu nechať na nasledujúci script: 
 
 ```bash
 $ curl https://getsubstrate.io -sSf | bash -s -- --fast
@@ -24,39 +24,39 @@ $ source ~/.cargo/env
 
 ## 02 Build
 
-Build the Wasm and native execution environments:
+Zostav Wasm a natívne prostredia na exekúciu:
 
 ```bash
-# Fetch source of the latest stable release
+# Načíta zdroj najnovšieho stabilného vydania
 $ git clone https://github.com/galacticcouncil/HydraDX-node -b stable
 
-# Build the binary
+#Vybuduj binárku
 $ cd HydraDX-node/
 $ cargo build --release
 ```
 
-You should be able to find the build under `./target/release/hydra-dx`.
+Build by si mal nájsť pod `./target/release/hydra-dx`.
 
-## 03 Run
+## 03 Spustenie
 
-Before running your build you can purge any existing development chains on your machine (you will need to do this often in the development process):
+Pred spustením svojho buildu môžeš prečistiť akékoľvek existujúce vývojové chainy na tvojom zariadení (toto budeš musieť v procese developmentu robiť často):
 
 ```bash
 $ ./target/release/hydra-dx purge-chain --dev
 ```
 
-Run your build using one of the following commands:
+Spusti svoj build pomocou jedného z nasledujúcich príkazov:
 
 ```bash
 $ ./target/release/hydra-dx --dev
 
-# Run with detailed logging
+#Spusti s podrobným protokolovaním
 $ RUST_LOG=debug RUST_BACKTRACE=1 ./target/release/hydra-dx -lruntime=debug --dev
 ```
 
-## 04 Connect to your local chain instance
+## 04 Pripoj sa ku svojej lokálnej chainovej inštancií
 
-You can connect to your HydraDX development node using Polkadot/apps and changing network to `Development`. You can also use this link:  
-https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer
+Ku svojmu lokálnemu HydraDX vývojovému nodu sa môžeš pripojiť pomocou Polkadot/apps zmenou networku na `Development`. Môžeš však na to použiť aj tento link: https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer
+
 
 <img alt="connect to node" src={useBaseUrl('/building/connect-to-node.jpg')} />
