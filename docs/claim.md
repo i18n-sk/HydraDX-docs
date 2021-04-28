@@ -1,112 +1,116 @@
 ---
 id: claim
-title: Claim your HDX
+title: Nárokuj si svoje HDX tokeny
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
-You can claim your HDX with the xHDX tokens (ERC-20) that you have obtained in the period when our [Balancer LBP](https://hydradx.substack.com/p/lbp-announcement) was live.
+Svoje HDX si môžeš nárokovať pomocou xHDX tokenov (ERC-20), ktoré si získal/a za obdobie, keď bola spustená naša služba [Balancer LBP](https://hydradx.substack.com/p/lbp-announcement).
 
-:::note
+:::poznámka
 
-You don't have any xHDX tokens but you would like to obtain some HDX nonetheless? Thank you for the interest but at this moment it is not possible to buy any HDX tokens - transfers of HDX are frozen until mainnet. As we move towards mainnet, however, we will be launching incentivized community programs which might earn you some early HDX. If you are interested, [subscribe to our newsletter](https://hydradx.substack.com) and join our Discord server to stay updated.
+Nemáš žiadne xHDX tokeny ale aj napriek tomu by si rád/a získal/a nejaké HDX? Ďakujeme ti za záujem no aktuálne nie je bohužiaľ možné zakúpiť si akékoľvek HDX tokeny - ich transfery sú zmrazené až do spustenia mainnetu. Keď však budeme blízko ku spusteniu mainnetu, spustíme motivačné komunitné programy, ktoré ti môžu priniesť nejaké HDX tokeny o niečo skôr. Ak ťa to zaujalo, [prihlás sa na odber newslettera](https://hydradx.substack.com) a pridaj sa na náš Discord server kde dostaneš všetky updates. 
 
 :::
 
-## Prerequisites {#prequisites}
+## Predpoklady {#prequisites}
 
-There are two prerequisites for claiming your HDX. In the first place, you need to install the [Polkadot.js browser extension](https://polkadot.js.org/extension/) which will be used to create your HDX wallet. In the second place, you need access to your xHDX tokens which should be stored in a wallet supporting the signing of messages relating to ERC-20 tokens (e.g. Metamask).
+Na získanie svojich HDX tokenov musíš mať splnené dva predpoklady, jedným je inštalácia [prehliadačového rozšírenia Polkadot.js](https://polkadot.js.org/extension/), ktoré bude použité na vytvorenie tvojej HDX peňaženky. Ako druhé budeš potrebovať prístup ku svojim xHDX tokenom, ktoré by mali byť uložené v peňaženke podporujúcej podpisovanie správ týkajúcich sa ERC-20 tokenov (napr. Matemask).
 
-If your xHDX tokens are stored in Coinbase Wallet or Trust Wallet, you will need to use one of the following workarounds for claiming your HDX, as these wallets do not support the signing of messages:
-* Metamask: You can use the Metamask browser extension and import your wallet using the recovery seed phrase.
-* MEW (MyEtherWallet): You can also use MEW by either importing your recovery seed phrase (*Mnemonic Phrase*) or by using the WalletLink connection option. Both options can be accessed from the [MEW wallet access page](https://www.myetherwallet.com/access-my-wallet). If you are using Coinbase Wallet, you can use WalletLink which you can find the Settings of Coinbase Wallet.
+Ak máš svoje xHDX tokeny uložené v Coinbase peňaženke, budeš potrebovať použiť jedno z nasledujúcich náhradných riešení, aby si mohol/la získať svoje HDX tokeny, keďže táto peňaženka nepodporuje podpisovanie vyššie spomenutých správ:
 
-## Claim process {#claim-process}
+* Metamask: Môžeš použiť rozšírenie Matemask a importovať svoju peňaženku pomocou seed frázy.
 
-After making sure that you have fulfilled the prerequisites described above, you can navigate to the [HydraDX Claim app](https://claim.hydradx.io) and proceed with the claim process.
+* MEW (MyEtherWallet): Môžeš na to použiť aj MEW, tiež buď importovaním svojej recovery seed frázy (*Mnemonickej frázy*) alebo použitím možnosti pripojenia cez Walletlink. Obidve možnosti môžeš nájsť na [stránke MEW wallet access](https://www.myetherwallet.com/access-my-wallet). Ak používaš Coinbase peňaženku, môžeš použiť Walletlink, ktorý nájdeš v nastaveniach Coinbase peňaženky.  
 
-During the claim process, you will use your xHDX tokens (ERC-20) to claim your share of HDX tokens.
+## Proces nárokovania tokenov {#claim-process}
 
-### 00 Authorize {#00-authorize}
+Po tom čo sa uistíš, že si splnil/a obidva predpoklady opísané vyššie, môžeš ísť do [HydraDX Claim aplikácie](https://claim.hydradx.io) a pokračovať v nárokovacom procese. 
 
-The HydraDX Claim app will request authorization from the Polkadot.js browser extension.
+Počas tohto procesu budeš používať xHDX tokeny (ERC-20) na získanie svojich HDX tokenov.
 
-:::warning
+### 00 Autorizácia {#00-authorize}
 
-Make sure that you are not the victim of a phishing attack and pay attention to the authorization popup: The application should be identifying itself as **CLAIM.HYDRADX.IO** and the request should be coming from **https://claim.hydradx.io**.
+HydraDX Claim aplikácia bude požadovať autorizáciu od Polkadot.js rozšírenia.
+
+:::pozor
+
+Uisti sa, že si sa nestal/a obeťou phishingového útoku a dávaj si pozor na autorizačné popup okno: Aplikácia by sa mala identifikovať ako **CLAIM.HYDRADX.IO** a žiadosť by mala prísť od **https://claim.hydradx.io**.
 
 :::
 
 <img alt="authorize" src={useBaseUrl('/claim/authorize.jpg')} />
 
-After authorizing, you will be prompted to update the metadata for the Polkadot.js browser extension. This will allow Polkadot.js to create HydraDX-specific addresses which are required to complete the claim process.
+Po autorizácií sa zobrazí výzva na aktualizáciu metadát pre Polkadot.js rozšírenie. Toto dovolí Polkadot.js vytvoriť adresu špecifickú pre HydraDX, ktorá je potrebná na dokončenie nárokovacieho procesu.
 
 <img alt="authorize" src={useBaseUrl('/claim/metadata.jpg')} />
 
-### 01 Select your ETH address {#01-select-your-eth-address}
+### 01 Vyber svoju ETH adresu {#01-select-your-eth-address}
 
-In the first step of the claim process, you will be asked to select the account holding your xHDX tokens. This can be done by either connecting to your wallet holding the ERC-20 tokens (e.g. Metamask), or by entering your ETH address manually in the input box (in that case you will need to sign the message manually later).
+V prvom kroku nárokovacieho procesu sa zobrazí výzva na výber účtu, na ktorom máš svoje xHDX tokeny. Môžeš to urobiť buď pripojením ku svojej peňaženke, ktorá drží tvoje xHDX tokeny (napr. Matemask) alebo manuálnym zadaním tvojej ETH adresy do input boxu (v tomto prípade budeš musieť neskôr podpísať správy manuálne).
 
-After entering your ETH address, you should see the balance of HDX tokens you can claim, including the [refund of the gas fees](https://hydradx.substack.com/p/first-governance-vote) that you have spent for obtaining your xHDX on Balancer.
+Po zadaní tvojej ETH adresy by si mal vidieť množstvo HDX tokenov, ktoré si môžeš nárokovať obsahujúce aj [náhradu gas fees](https://hydradx.substack.com/p/first-governance-vote), ktoré si utratil/a na získanie xHDX tokenov na Balanceri.
 
-:::note
+:::poznámka
 
-You are not eligible for a gas refund if you have obtained your xHDX at some other place than the official Balancer pool (such as Uniswap), or if you have moved your tokens out of the original buying wallet.
+Na náhradu gas fees nemáš nárok ak si získal/a svoje xHDX tokeny niekde inde než oficálne cez Balancer pool (napríklad na Uniswap) alebo ak si presunul/a svoje tokeny mimo peňaženky, do ktorej si ich originálne kúpil/a.
 
 :::
 
 <img alt="authorize" src={useBaseUrl('/claim/claim-01.jpg')} />
 
-### 02 Create and select an HDX address {#02-create-and-select-an-hdx-address}
+### 02 Vytvor a vyber svoju HDX adresu {#02-create-and-select-an-hdx-address}
 
-In the second step, you will be asked to select your HDX address.
+V druhom kroku sa zobrazí výzva na výber tvojej HDX adresy.
 
-To create a new HDX address, open the Polkadot.js browser extension and click on the + sign to create a new account. In the first step of account creation, you will see the 12-word mnemonic phrase which can be used to recover your account. After saving your seed phrase in a secure place, click on *Next step*. Here, you should change the **Network** by selecting the option **HydraDX Snakenet**. Enter a name and password for your account, and finish the account creation.
+Na vytvorenie novej HDX adresy otvor rozšírenie Polkadot.js a klikni na '+', aby si vytvoril/a nový účet. V prvom kroku vytvárania nového účtu uvidíš 12-slovnú mnemonickú frázu, ktorá môže byť použitá na obnovu tvojho účtu. Po tom čo si túto frázu uložíš na nejakom bezpečnom mieste môžeš kliknúť na *Next step*. Tu by si mal/a zmeniť **Network** vybratím možnosti **HydraDX Snakenet**. Zadaj meno a heslo pre svoj účet a dokonči jeho kreáciu.
 
 <img alt="authorize" src={useBaseUrl('/claim/create-account.png')} />
 
-:::warning 
+:::pozor
 
-Make sure that you back up your recovery seed phrase by storing it in a safe place and never share it with anybody. Using the seed phrase is the only way you can recover your account and if you lose or leak it, your funds might be compromised. Please note that you need to secure your access to this wallet until the mainnet starts, as all HDX balances are currently locked. If you lose access to your HDX wallet you will also lose your HDX.
+Uisti sa, že máš svoju recovery seed frázu zálohovanú na bezpečnom mieste a nikdy ju s nikým nezdieľaj. Použitie tejto frázy je jediný spôsob ako si obnoviť účet a pokiaľ ju stratíš alebo niekomu prezradíš, tvoje prostriedky môžu byť ohrozené. Prosím pamätaj, že prístup ku tvojej peňaženke musí byť zabezpečený až do spustenia mainnetu, keďže všetky bilancie sú aktuálne uzamknuté. Ak stratíš prístup ku svojej HDX peňaženke, stratíš aj všetky svoje HDX tokeny.
 
 :::
 
-After creating your HDX account, you should be able to select it in the HydraDX Claim app. After doing so, the app should provide you with an overview of the ETH and HDX addresses used for the claim process. Click on next to proceed to signing the message.
+Po vytvorení svojho HDX účtu by si mal/a byť schopný/á vybrať si ju v HydraDX Claim aplikácií. Po tom, čo to urobíš, aplikácia by ti mala poskytnúť prehľad ETH a HDX adries použitých v nárokovacom procese. Klikni na *Next* a pokračuj s podpísaním správy.
 
 <img alt="authorize" src={useBaseUrl('/claim/claim-02.jpg')} />
 
-### 03 Sign {#03-sign}
+### 03 Podpíš nárokovaciu správu {#03-sign}
 
-In the third step of the claim process using the HydraDX Claim app, you will be provided with the option to sign the message for using your xHDX tokens to claim HDX.
+V treťom kroku nárokovacieho procesu sa ti v HydraDX Claim aplikácií zobrazí možnosť podpísať správu, ktorá potvrdzuje použitie tvojich xHDX tokenov na získanie HDX tokenov.
 
-:::note
+:::poznámka
 
-Please note that in this step you will see the **public key** of your HDX address, and not the address in its human readable form as it was displayed in the previous step and in your Polkadot.js browser extension (for more details refer to the [ss58 docs](https://polkadot.js.org/docs/keyring/start/ss58)). If you have followed all steps as described above, there is nothing to worry about and it is safe to proceed with signing the message. We will also verify that the HDX account you are using to sign the claim transaction at the final step corresponds with the account which is receiving the claimed HDX.
+Upozorňujeme, že v tomto kroku uvidíš **public key** svojej HDX adresy, a nie adresu v bežne čitateľnej forme, ktorá bola vystavená v predchádzajúcom kroku a v rozšírení Polkadot.js (pre viac detailov navštív [ss58 docs](https://polkadot.js.org/docs/keyring/start/ss58)). Ak si podnikol/la všetky kroky popísané vyššie, nemusíš sa ničoho obávať a je bezpečné pokračovať v podpisovaní správy. Taktiež overíme, či účet HDX, ktorý používaš na podpísanie nárokovacej transakcie, v poslednom kroku zodpovedá účtu, ktorý prijíma nárokované HDX tokeny.
 
 :::
 
-Depending on the choice you have made in the first step, you have two options to sign the message for using the xHDX tokens in the claim process:
+V závislosti na možnosti, ktorú si si vybral/a v prvom kroku, máš dve možnosti, ako podpísať správu o použití tokenov xHDX v procese nárokovania:
 
-* If you are using **Metamask**, after clicking the *Sign* button you will be prompted by Metamask to sign the message. Follow the instructions in Metamask.
+* Ak používaš ** Metamask **, po kliknutí na tlačidlo *Sign* ťa Metamask vyzve na podpísanie správy. Postupuj podľa pokynov v Metamask.
 
-* If you have entered your ETH address manually, you will need to sign the message through the external wallet that holds the private keys of your xHDX tokens. Once you have signed the message, copy the signature (starting with *0x*) to the respective field in the HydraDX Claim app.
+* Ak si zadal/a svoju ETH adresu manuálne, budeš musieť správu podpísať cez externú peňaženku, ktorá obsahuje súkromné kľúče tvojich xHDX tokenov. Po podpísaní správy skopíruj podpis (začínajúci *0x*) do príslušného poľa v aplikácii HydraDX Claim.
 
 <img alt="authorize" src={useBaseUrl('/claim/claim-03.jpg')} />
 
-### 04 Claim {#04-claim}
+### 04 Získanie tokenov {#04-claim}
 
-After signing the message with the wallet holding your xHDX tokens, the Polkadot.js extension should open and you will be asked to sign the transaction for claiming the HDX to your account. Enter your HDX account password, and click *Sign the transaction*.
+Po podpísaní správy v peňaženke, ktorá obsahuje tvoje xHDX tokeny, by sa malo otvoriť rozšírenie Polkadot.js a zobrazí sa výzva na podpísanie transakcie s cieľom získať nárok na HDX na tvoj účet. Zadaj heslo svojho účtu HDX a klikni na *Sign the transaction*.
 
 <img alt="authorize" src={useBaseUrl('/claim/claim-sign.jpg')} />
 
-You have now completed the claim process, thereby officially becoming an HDX owner!
+Týmto si dokončil/a proces nárokovania tokenov a stal/a ste sa tak oficiálne vlastníkom HDX!
 
-You can check your balance using [Polkadot/apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc-01.snakenet.hydradx.io#/accounts) connected to the HydraDX Snakenet network. Please note that you cannot see your HDX balance directly in the Polkadot.js browser extension.
+Svoj zostatok môžeš skontrolovať pomocou aplikácie [Polkadot / apps](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc-01.snakenet.hydradx.io#/accounts) pripojenej k sieti HydraDX Snakenet. Upozorňujeme, že tvoje množstvo HDX tokenov neuvidíš priamo v rozšírení prehliadača Polkadot.js.
 
-### 05 What's next? {#05-whats-next}
 
-After completing the claim process, the HDX tokens will remain locked in your wallet until the launch of mainnet. 
+### Čo ďalej? {#05-whats-next}
 
-The xHDX tokens (which you used to claim HDX), on the other hand, will remain locked in your ERC-20 wallet forever, meaning that you can hide them from your wallet (or keep them visible as an early-adopter badge).
+Po dokončení procesu nárokovania zostanú tokeny HDX uzamknuté v peňaženke až do spustenia mainnetu.
 
-Do you want to put your HDX tokens to work and help improve the security of the HydraDX network? Then you could participate at our incentivized testnet called **Snakenet** by staking your HDX. If you are interested, you can proceed by getting familiar with the [staking process](/staking), after which you can decide to participate as a [validator](/start_validating) or a [nominator](/start_nominating).
+Na druhej strane tokeny xHDX (ktoré si použil/a na získanie HDX tokenov) zostanú v tvojej peňaženke ERC-20 uzamknuté navždy, čo znamená, že ich môžeš vo svojej peňaženke skryť (alebo ich ponechať viditeľné ako odznak early-adoptera).
+
+Chceš využiť svoje HDX tokeny a pomôcť zlepšiť zabezpečenie siete HydraDX? Môžeš sa zapojiť do nášho motivačného testnetu s názvom **Snakenet** stakeovaním svojich tokenov. Ak máš záujem, môžeš pokračovať oboznámením sa so [stakingovým procesom](/staking) a potom sa môžeš rozhodnúť či sa staneš [validátorom](/start_validating) alebo [nominátorom](/start_nominating).
+
